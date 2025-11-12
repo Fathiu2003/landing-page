@@ -1,0 +1,12 @@
+body{font-family:sans-serif;margin:0;padding:0;line-height:1.5;color:#333}
+.header{display:flex;justify-content:space-between;align-items:center;padding:1rem;background:#222;color:#fff}
+.header nav a{color:#fff;margin-left:1rem;text-decoration:none}
+.hero{text-align:center;padding:4rem 1rem;background:#f4f4f4}
+.hero .btn{padding:0.8rem 1.5rem;background:#222;color:#fff;text-decoration:none;border-radius:5px}
+section{padding:2rem 1rem}
+.cards{display:flex;gap:1rem;flex-wrap:wrap}
+.card{flex:1 1 200px;background:#eee;padding:1rem;border-radius:10px}
+form{display:flex;flex-direction:column;gap:0.5rem;max-width:400px;margin:auto}
+input,textarea{padding:0.5rem;border-radius:5px;border:1px solid #ccc}
+button{padding:0.7rem;border:none;background:#222;color:#fff;border-radius:5px;cursor:pointer}
+footer{text-align:center;padding:1rem;background:#222;color:#fff;margin-top:2rem}
