@@ -1,12 +1,85 @@
-body{font-family:sans-serif;margin:0;padding:0;line-height:1.5;color:#333}
-.header{display:flex;justify-content:space-between;align-items:center;padding:1rem;background:#222;color:#fff}
-.header nav a{color:#fff;margin-left:1rem;text-decoration:none}
-.hero{text-align:center;padding:4rem 1rem;background:#f4f4f4}
-.hero .btn{padding:0.8rem 1.5rem;background:#222;color:#fff;text-decoration:none;border-radius:5px}
-section{padding:2rem 1rem}
-.cards{display:flex;gap:1rem;flex-wrap:wrap}
-.card{flex:1 1 200px;background:#eee;padding:1rem;border-radius:10px}
-form{display:flex;flex-direction:column;gap:0.5rem;max-width:400px;margin:auto}
-input,textarea{padding:0.5rem;border-radius:5px;border:1px solid #ccc}
-button{padding:0.7rem;border:none;background:#222;color:#fff;border-radius:5px;cursor:pointer}
-footer{text-align:center;padding:1rem;background:#222;color:#fff;margin-top:2rem}
+:root {
+      --blue: #0EA5E9;
+      --gold: #F59E0B;
+      --dark: #0F172A;
+      --gray: #1e293b;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; background:var(--dark); color:white; overflow-x:hidden; }
+    a { text-decoration:none; color:inherit; }
+
+    /* Hero - Pure Conversion */
+    .hero {
+      min-height:100vh;
+      background:linear-gradient(135deg,var(--blue) 0%,var(--dark) 70%);
+      display:flex; align-items:center; justify-content:center;
+      text-align:center; padding:2rem; position:relative;
+    }
+    .hero::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(circle at 30% 70%,rgba(245,158,11,0.3),transparent 50%);
+    }
+    .container { max-width:1100px; margin:0 auto; position:relative; z-index:2; }
+
+    .badge {
+      display:inline-block; background:#25D366; color:white;
+      padding:10px 25px; border-radius:50px; font-weight:bold; margin-bottom:20px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.05); } }
+
+    h1 {
+      font-size:4.8rem; font-weight:900; line-height:1.1;
+      margin:20px 0;
+      background:linear-gradient(to right,#fff,#F59E0B);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    .highlight { color:var(--gold); }
+    .subtitle {
+      font-size:2rem; color:#e2e8f0; margin:20px 0; font-weight:600;
+    }
+    .guarantee {
+      background:rgba(245,158,11,0.15); border:2px solid var(--gold);
+      padding:25px; border-radius:20px; max-width:800px; margin:40px auto;
+      font-size:1.4rem;
+    }
+
+    /* CTA Buttons */
+    .cta-buttons {
+      margin:50px 0; display:flex; gap:20px; flex-wrap:wrap;
+      justify-content:center; align-items:center;
+    }
+    .btn {
+      padding:20px 50px; border-radius:50px; font-size:1.5rem;
+      font-weight:900; display:inline-flex; align-items:center; gap:15px;
+      transition:0.4s; box-shadow:0 15px 35px rgba(0,0,0,0.4);
+    }
+    .btn-whatsapp {
+      background:#25D366; animation: bounce 2s infinite;
+    }
+    .btn-whatsapp:hover { transform:scale(1.1); background:#1ebe57; }
+    @keyframes bounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-15px); } }
+
+    .price {
+      font-size:4rem; color:var(--gold); font-weight:900; margin:40px 0;
+    }
+    .old-price { text-decoration:line-through; color:#64748b; font-size:2rem; }
+    .bonus { color:#25D366; font-size:1.3rem; margin:20px 0; }
+
+    /* Trust Badges */
+    .trust {
+      margin:60px 0; display:flex; justify-content:center; gap:50px;
+      flex-wrap:wrap; font-size:1.3rem; opacity:0.9;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      background:var(--gray); padding:80px 20px; text-align:center;
+    }
+
+    @media (max-width:768px) {
+      h1 { font-size:3.2rem; }
+      .subtitle { font-size:1.6rem; }
+      .btn { padding:18px 35px; font-size:1.3rem; }
+      .price { font-size:3rem; }
+    }
